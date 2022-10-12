@@ -9,7 +9,7 @@ rate = rospy.Rate(1)
 def start_talker():
     msg = String()
     while not rospy.is_shutdown():
-        hello_str = "hi =) %s" % rospy.get_time()
+        hello_str = "hi =)"
         rospy.loginfo(hello_str)
 
         msg.data = hello_str
