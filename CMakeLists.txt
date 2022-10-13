@@ -119,6 +119,15 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+set(TALKER_NODE_NAME talker_cpp)
+set(TALKER_NODE_SRC  src/talker.cpp)
+
+add_executable(${TALKER_NODE_NAME} ${TALKER_NODE_SRC})
+
+add_dependencies(${TALKER_NODE_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+target_link_libraries(${TALKER_NODE_NAME} ${catkin_LIBRARIES})
+
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/study_pkg.cpp
