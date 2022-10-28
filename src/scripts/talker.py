@@ -9,15 +9,16 @@ rate = rospy.Rate(1)
 def start_talker():
     msg = String()
     i = 0
-    while not rospy.is_shutdown():
-        hello_str = str(i)
-        i += 2
-        rospy.loginfo(hello_str)
+    
+while not rospy.is_shutdown():
+    hello_str = str(i)
+    i += 2
+    rospy.loginfo(hello_str)
 
-        msg.data = hello_str
-        pub.publish(msg)
+    msg.data = hello_str
+    pub.publish(msg)
 
-        rate.sleep()
+    rate.sleep()
 
 try:
     start_talker()
