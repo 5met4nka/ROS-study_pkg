@@ -1,8 +1,4 @@
 <launch>
-	<group ns="new_ws">
-		<node name="listener_cpp" pkg="study_pkg" type="listener.cpp" output="screen"/>
-			<remap from="chatter" to="new_topic"/>
-		<node name="talker_cpp" pkg="study_pkg" type="talker.cpp" output="screen"/>
-			<remap from="chatter" to="new_topic"/>
-	</group>
+	<node name="listener_cpp" pkg="study_pkg" type="listener.cpp" output="screen"/>
+	<node name="talker_cpp" pkg="study_pkg" type="talker.cpp" output="screen"/>
 </launch>
