@@ -1,0 +1,10 @@
+<launch>
+	<arg name="my_chat_topic" default="new_chatter"/>	
+	<group ns="new_ws">
+		<include file="$(find study_pkg)/launch/another_one.launch">
+			<arg name="hoge" value="$(arg new_topic_name)"/>
+		</include>
+		<node name="sender" pkg="study_pkg" type="talker.py" output="screen"/>
+		<remap from="my_chat_topic" to="$(arg new_topic_name)"/>
+	</group>
+</launch>

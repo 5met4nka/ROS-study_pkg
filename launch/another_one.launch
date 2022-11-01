@@ -1,4 +1,7 @@
 <launch>
-	<node name="listener" pkg="study_pkg" type="listener.py" output="screen"/>
-		<remap from="chatter" to="new_topic"/>
+	<arg name="hoge"/>
+	<param name="param" value="$arg hoge"/>
+	<node name="reseiver" pkg="study_pkg" type="listener.py" output="screen">
+	<remap from="chatter" to="$(arg hoge)"/>
+	</node>
 </launch>

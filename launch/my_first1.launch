@@ -1,0 +1,13 @@
+<launch>
+	
+	<arg name="new_topic_name" default="new_chatter" />
+	
+	<group ns="new_ws">
+		<node name="reseiver" pkg="study_pkg" type="listener.py" output="screen">
+			<remap from="my_chat_topic" to="$(arg new_topic_name)"/>
+		</node>
+		<node name="sender" pkg="study_pkg" type="talker.py" output="screen">
+			<remap from="my_chat_topic" to="$(arg new_topic_name)"/>
+		</node>
+	</group>
+</launch>

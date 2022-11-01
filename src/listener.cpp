@@ -1,36 +1,20 @@
-#include <ros/ros.h> // подключаем заголовки ROS
-#include <std_msgs/String.h> // подключаем заголовки типа сообщения
-
-/* 
-* аргумент callback-функции:
-* const - константная ссылка, чтобы мы не меняли содержание внутри этой функции
-* std_msgs::String - по типу топика
-* & - ссылка на полученное сообщение, фишка С++, вместо указателей
-* msg - название аргумента
-*/
+#include <ros/ros.h>
+#include <std_msgs/String.h>
 
 void topicCallback(const std_msgs::String& msg)
 {
-  ROS_INFO("I heard: [%s]", msg.data.c_str()); 
-  /*
-  * после этого выводим в консоль данные, при этом используется `c_str()`,
-  * чтобы получить строку в формате С, так как `ROS_INFO()` - аналог функции `printf()`
-  */
+  ROS_INFO("I heard: [%s]", msg.data.c_str());
 }
 
 int main(int argc, char **argv)
 {
-  /*
-  * аналогичная инициализация за единственным исключением - регистрируем и получаем объект подписки.
-  * в аргументах также передается функция-обработчик, которая будет вызываться на приход сообщения по данному топику
-  */
   ros::init(argc, argv, "listener");
 
   ros::NodeHandle n;
 
   ros::Subscriber sub = n.subscribe("cpp_chatter", 1000, topicCallback);
 
-  ros::spin(); // вызов функции бесконечной обработки событий прихода сообщений через топик
+  ros::spin();
 
   return 0;
 }
