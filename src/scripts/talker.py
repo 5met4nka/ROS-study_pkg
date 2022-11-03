@@ -17,8 +17,8 @@ def start_talker():
     while not rospy.is_shutdown(): # бесконечный цикл, пока ROS система работает
 
         data = 'Speed: %d / Steer: %d' % (msg.speed, msg.steer)
-        rospy.loginfo(data) # вывод в терминал информации (содержание сообщения)
 
+        rospy.loginfo(data) # вывод в терминал информации (содержание сообщения)
         pub.publish(msg) # публикация сообщения в топик
 
         steer += 2
