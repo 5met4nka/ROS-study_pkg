@@ -5,11 +5,6 @@
 import rospy # импортируем основной модуль `rospy`
 from study_pkg.msg import Control # импортируем модуль сообщения
 
-rospy.init_node('talker') # необходимо зарегистрировать узел в системе ROS
-pub = rospy.Publisher('my_chat_topic', Control, queue_size=10) # зарегистрировать топик на публикацию
-# с указанием имени, типа сообщения для топика и размера очереди
-rate = rospy.Rate(1) # используется для выдерживания частоты выполнения кода, Гц
-
 def start_talker():
     msg = Control() # создаем объект сообщения
     steer = 0
@@ -29,6 +24,11 @@ def start_talker():
         msg.speed = speed
 
         rate.sleep() # сон в соответствии с выдерживаемой частотой
+
+rospy.init_node('talker') # необходимо зарегистрировать узел в системе ROS
+pub = rospy.Publisher('my_chat_topic', Control, queue_size=10) # зарегистрировать топик на публикацию
+# с указанием имени, типа сообщения для топика и размера очереди
+rate = rospy.Rate(1) # используется для выдерживания частоты выполнения кода, Гц
 
 try:
     start_talker()
