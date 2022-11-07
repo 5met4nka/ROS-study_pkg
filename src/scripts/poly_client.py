@@ -8,10 +8,10 @@ from study_pkg.srv import Poly, PolyRequest, PolyResponse # импортируе
 rospy.wait_for_service('poly') # функцию ожидания регистрации сервиса
 
 try:
-    poly_srv = rospy.ServiceProxy('poly', Poly) # получаем объект сервиса функцией
-    req = PolyRequest(x=7)
-    resp = poly_srv(req)
+	poly_srv = rospy.ServiceProxy('poly', Poly) # получаем объект сервиса функцией
+	req = PolyRequest(x=7)
+	resp = poly_srv(req)
 
-    rospy.loginfo('Response: %s' % resp.y) # вывод в терминал информации
+	rospy.loginfo('Response: %s' % resp.y) # вывод в терминал информации
 except rospy.ServiceException:
-    rospy.logerr("Service call failed: %s" % e)
+	rospy.logerr("Service call failed: %s" % e)
