@@ -12,9 +12,9 @@ action_server = None
 
 # Определим функцию, которую будет выполнять наш сервер по приходу запроса с целью
 def learn_execute(goal):
-	step 		= 0
-	accuracy 	= 0
-	done 		= True
+	step = 0
+	accuracy = 0
+	done = True
 
 	while accuracy < goal.target_accuracy and step < 100:
 		# Обработаем запрос на прерывание обработки
@@ -35,8 +35,8 @@ def learn_execute(goal):
 
 		# Отправим LearningFeedback
 		feedback = LearningFeedback()
-		feedback.current_accuracy 	= accuracy
-		feedback.step_number 		= step
+		feedback.current_accuracy = accuracy
+		feedback.step_number = step
 		action_server.publish_feedback(feedback)
 
 	if done:
@@ -45,7 +45,7 @@ def learn_execute(goal):
 		# Отправим результат, если не прервали нас
 		result = LearningResult()
 		result.result_accuracy 	= accuracy
-		result.step_count 		= step
+		result.step_count = step
 		action_server.set_succeeded(result)
 
 # Создадим объект сервера

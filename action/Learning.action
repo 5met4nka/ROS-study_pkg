@@ -1,7 +1,10 @@
+# то,что передает action-клиент
 float32 target_accuracy
 ---
+# то,что передает action-сервер по истечению обработки
 float32 result_accuracy
-uint32  step_count
+uint32 step_count
 ---
+# информация, которую передает action-сервер с какой-то периодичностью
 float32 current_accuracy
-uint32  step_number
+uint32 step_number
