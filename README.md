@@ -10,3 +10,8 @@
 * tb3_gz_keyboard_localization.launch - запуск симуляции с управлением для локализации  
 * rviz_localization_view.launch - запуск rviz под локализацию  
 
+* move_base.launch - запуск movebase  
+* tb3_gz_mb_slam.launch - запуск симулятора, slam и movebase  
+* rviz_slam_mb_view.launch - запуск rviz, заточенного под slam и movebase  
+* tb3_gz_mb_localization.launch - запуск симуляции, movebase и amcl  
+* rviz_localization_mb_view.launch - запуск rviz, настроенного под amcl и movebase  
