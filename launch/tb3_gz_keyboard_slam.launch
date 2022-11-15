@@ -1,9 +1,9 @@
 <launch>
-	<!-- Start turtlebot Gazebo simulation -->
+	<!-- симуляция gazebo с черепахой -->
 	<include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch">
 	</include>
 
-	<!-- Start additional nodes to work -->
+	<!-- указываем на желаемую модель робота -->
 	<arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
 
 	<include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">
@@ -13,7 +13,7 @@
 	<include file="$(find study_pkg)/launch/gmapping.launch">
 	</include>
 
-	<!-- Start teleop -->
+	<!-- включаем управление с клавиатуры -->
 	<include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch">
 	</include>
 </launch>
