@@ -6,6 +6,7 @@
 * gmapping.launch - узел slam  
 * tb3_gazebo_start.launch - запуск симуляции с роботом  
 * tb3_gz_keyboard_slam.launch - запуск симуляции со slam и управлением, без rviz  
+---
 * amcl.launch - запуск алгоритма локализации  
 * tb3_gz_keyboard_localization.launch - запуск симуляции с управлением для локализации  
 * rviz_localization_view.launch - запуск rviz под локализацию  
