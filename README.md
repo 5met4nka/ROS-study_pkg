@@ -22,4 +22,3 @@
 * rviz_slam_mb_view - запуск rviz, настроенный под slam и movebase  
 * tb3_gz_mb_localization.launch - запуск симуляции, movebase и локализации (amcl)  
 * rviz_localization_mb_view.launch - rviz, настроенный под mb и amcl  
-
