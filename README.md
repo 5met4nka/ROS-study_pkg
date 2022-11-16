@@ -16,3 +16,10 @@
 * rviz_slam_mb_view.launch - запуск rviz, заточенного под slam и movebase  
 * tb3_gz_mb_localization.launch - запуск симуляции, movebase и amcl  
 * rviz_localization_mb_view.launch - запуск rviz, настроенного под amcl и movebase  
+---
+* move_base.launch - запуск movebase  
+* tb3_gz_mb_slam.launch - запуск симулятора с навигацией по карте (без телеуправления)  
+* rviz_slam_mb_view - запуск rviz, настроенный под slam и movebase  
+* tb3_gz_mb_localization.launch - запуск симуляции, movebase и локализации (amcl)  
+* rviz_localization_mb_view.launch - rviz, настроенный под mb и amcl  
+
