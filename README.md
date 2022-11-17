@@ -1,6 +1,6 @@
 # ROS-study_pkg
----
-turtle.launch - запуск игры с rviz
+
+* turtle.launch - запуск игры с rviz
 ---
 * turtlebot3_gazebo_rviz.launch - rviz настроенный для черепахи  
 * tb3_gz_keyboard_rviz.launch - запуск всего вместе  
