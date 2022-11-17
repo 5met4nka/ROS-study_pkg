@@ -56,6 +56,12 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        carrot:
+          Value: true
+        turtle1:
+          Value: true
+        world:
+          Value: true
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -63,7 +69,10 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        world:
+          turtle1:
+            carrot:
+              {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -93,8 +102,8 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Class: rviz/Orbit
-      Distance: 10
+      Class: rviz/ThirdPersonFollower
+      Distance: 5.463438510894775
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -102,17 +111,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: -0.03375649452209473
+        Y: 0.08623766899108887
+        Z: 2.6226043701171875e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.785398006439209
-      Target Frame: <Fixed Frame>
-      Yaw: 0.785398006439209
+      Pitch: 0.25039875507354736
+      Target Frame: turtle1
+      Yaw: 2.8054146766662598
     Saved: ~
 Window Geometry:
   Displays:
@@ -131,4 +140,4 @@ Window Geometry:
     collapsed: false
   Width: 1200
   X: 60
-  Y: 23
+  Y: 0

@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 import rospy
-
+import tf # импорт модуля TF
 import math
-import tf
 from geometry_msgs.msg import Twist
 import turtlesim.srv
 
