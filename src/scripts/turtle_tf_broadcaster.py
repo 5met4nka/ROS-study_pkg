@@ -9,13 +9,12 @@ from turtlesim.msg import Pose # импорт модуля содержащий 
 
 def handle_turtle_and_carrot_pose(msg):
 
-    angle = int((time.time() * 100)) % 360
-    print(angle)
-    x = 1 * math.cos(angle * 0.0174533)
-    y = 1 * math.sin(angle * 0.0174533)
+    angle = int((time.time() * 100)) % 360 * 0.0174533
+    x = 1 * math.cos(angle)
+    y = 1 * math.sin(angle)
     br = tf.TransformBroadcaster() # получаем объект публикатора информации TF
     br.sendTransform((msg.x, msg.y, 0), quaternion_from_euler(0, 0, msg.theta), rospy.Time.now(), turtlename, "world")
-    br.sendTransform((x, y, 0), quaternion_from_euler(0, 0, 0), rospy.Time.now(), "carrot", "turtle1")
+    br.sendTransform((x, y, 0), quaternion_from_euler(0, 0, angle), rospy.Time.now(), "carrot", "turtle1")
 
 if __name__ == '__main__':
 

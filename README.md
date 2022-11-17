@@ -1,6 +1,7 @@
 # ROS-study_pkg
 
-* turtle.launch, turtle2.launch - запуск игры с rviz (во втором случае вторая черепаха гоняется за морковкой)
+* turtle.launch - запуск игры с rviz (морковка крутиться вокруг черепахи)
+* turtle2.launch - запуск игры с rviz (в этом случае вторая черепаха гоняется за морковкой)
 ---
 * turtlebot3_gazebo_rviz.launch - rviz настроенный для черепахи  
 * tb3_gz_keyboard_rviz.launch - запуск всего вместе  
