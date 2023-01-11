@@ -11,19 +11,15 @@
 * tb3_gz_keyboard_slam.launch - запуск симуляции со slam и управлением, без rviz  
 ---
 * amcl.launch - запуск алгоритма локализации  
-* tb3_gz_keyboard_localization.launch - запуск симуляции с управлением для локализации  
-* rviz_localization_view.launch - запуск rviz под локализацию  
+*   
+* roslaunch study_pkg tb3_gz_keyboard_localization.launch - запуск симуляции с управлением для локализации  
+* roslaunch study_pkg rviz_localization_view.launch - запуск rviz под локализацию  
 ---
-* move_base.launch - запуск movebase  
-* tb3_gz_mb_slam.launch - запуск симулятора, slam и movebase  
-* rviz_slam_mb_view.launch - запуск rviz, заточенного под slam и movebase  
-* tb3_gz_mb_localization.launch - запуск симуляции, movebase и amcl  
-* rviz_localization_mb_view.launch - запуск rviz, настроенного под amcl и movebase  
----
+* 9  
 * move_base.launch - запуск movebase  
 *   
 * roslaunch study_pkg tb3_gz_mb_slam.launch - запуск симулятора с навигацией по карте (без телеуправления)  
 * roslaunch study_pkg rviz_slam_mb_view - запуск rviz, настроенный под slam и movebase  
 *   
 * roslaunch study_pkg tb3_gz_mb_localization.launch - запуск симуляции, movebase и локализации (amcl)  
-* roslaunch study_pkg rviz_localization_mb_view.launch - rviz, настроенный под mb и amcl  
+* roslaunch study_pkg rviz_localization_mb_view.launch - rviz, настроенный под movebase и amcl  
