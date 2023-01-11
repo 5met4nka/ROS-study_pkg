@@ -23,6 +23,6 @@
 * move_base.launch - запуск movebase  
 * roslaunch study_pkg tb3_gz_mb_slam.launch - запуск симулятора с навигацией по карте (без телеуправления)  
 * roslaunch study_pkg rviz_slam_mb_view - запуск rviz, настроенный под slam и movebase  
-  
+*   
 * roslaunch study_pkg tb3_gz_mb_localization.launch - запуск симуляции, movebase и локализации (amcl)  
 * roslaunch study_pkg rviz_localization_mb_view.launch - rviz, настроенный под mb и amcl  
