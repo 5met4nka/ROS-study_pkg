@@ -1,15 +1,21 @@
 # ROS-study_pkg
-
-* turtle.launch - запуск игры с rviz (морковка крутиться вокруг черепахи)
-* turtle2.launch - запуск игры с rviz (в этом случае вторая черепаха гоняется за морковкой)
+* 1-3  
+* roslaunch study_pkg turtle.launch - запуск игры с rviz (морковка крутиться вокруг черепахи)
+* roslaunch study_pkg turtle2.launch - запуск игры с rviz (в этом случае вторая черепаха гоняется за морковкой)
 ---
-* turtlebot3_gazebo_rviz.launch - rviz настроенный для черепахи  
-* tb3_gz_keyboard_rviz.launch - запуск всего вместе  
-* rviz_slam_view.launch и tb3_gz_keyboard_slam.launch - задача отделения запуска настроенного под slam rviz от запуска симуляции, slam и управления с клавы  ---
-* gmapping.launch - узел slam  
-* tb3_gazebo_start.launch - запуск симуляции с роботом  
-* tb3_gz_keyboard_slam.launch - запуск симуляции со slam и управлением, без rviz  
+* 5-6  
+* TURTLEBOT3_MODEL=waffle roslaunch study_pkg tb3_gz_keyboard_rviz.launch - запуск всего вместе  
+*   
+* roslaunch study_pkg gmapping.launch - узел slam  
+* roslaunch study_pkg tb3_gazebo_start.launch - запуск симуляции с роботом  
+*   
+* TURTLEBOT3_MODEL=waffle roslaunch study_pkg tb3_gz_keyboard_rviz.launch - запуск симуляции со slam и управлением, с rviz  
+* roslaunch study_pkg gmapping.launch - запуск gmapping
+*   
+* TURTLEBOT3_MODEL=waffle roslaunch study_pkg tb3_gz_keyboard_slam.launch - запуск симуляции со slam и управлением, без rviz  
+* roslaunch study_pkg rviz_slam_view.launch - запуск rviz под все это дело
 ---
+* 7  
 * amcl.launch - запуск алгоритма локализации  
 *   
 * roslaunch study_pkg tb3_gz_keyboard_localization.launch - запуск симуляции с управлением для локализации  
